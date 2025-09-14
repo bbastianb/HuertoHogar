@@ -1,0 +1,11 @@
+:root{
+    --background: #F7F7F7;
+    --accent: #2E8B57;
+    --highlight: #FFD700;
+    --title: #8B4513;
+    --text:#333333;
+    --text2:#666666;
+
+    --radius: 16px;
+    --shadow: 0 8px 24px rgba(0,0,0,.08);
+}
