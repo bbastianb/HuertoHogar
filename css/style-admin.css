@@ -1,0 +1,190 @@
+#body-home-admin{
+    background-color:#F7F7F7;   /* Color de fondo del body"Fondo principal" */
+    margin: auto;                 /* Define que el margen del body sea automatico*/
+    display: flex;                /* Hace que los elementos del body sean flex */     
+    flex-wrap: wrap;              /* Hace que cuando el espacio del sea reducido se acomode hacia abajo */
+    flex-direction: column;       /* Cambia la direccion del flexbox en columnas */
+}
+
+.section-principal{
+    display: flex;  /* Define el contenedor principal como un flexbox */
+    gap: 2%;        /* Separacion de los elementos de la section "Entre la barra y lo de mas" */
+}
+
+/* --- Contenedor de la barra lateral --- */
+.nav-admin{
+    background-color:#F7F7F7;                   /* Color de fondo para la barra lateral */ 
+    padding: 1% 3% 3% 3%;                         /* Espacio interno de la barra */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.30);    /* Sombra de la barra */
+    
+   
+    display: flex;       /* Hace que los elementos de la barra sean flexbox */
+    flex-direction: column;     /* Direccion de la barra se lo asigna con el flexbox */
+    justify-content: space-between;    /* Distribuye el espacio de la barra en todo los elemntos que hay en ella */
+
+   /*Fija un ancho para la barra */
+    min-width: 220px;
+    max-width: 220px;
+
+    /* Da reglas a la altura de la barra un min y max */
+    height: auto;      /* Deja que el auto sea automatico */
+    min-height: 97vh;  /* Este es el min para distintos tipos de pantalla*/
+    max-height: none;  /* Asigna que el max del alto sea cualquiera quita la reglas */
+}
+
+.nav-principal-admin div {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-principal-admin{
+    display: flex;              /* Hace que los elementos del menu sea flebox */
+    flex-direction: column;     /* Direccion de los elementos flex */
+    gap: 20px;                  /* Separacion de los elementos en este caso img y links */
+    padding: 0%;                /* Les saca el padding a los elementos para evitar espacios inecesarios */
+}
+
+.nav-secundario-admin{
+    display: flex;
+    flex-direction: column;     /* Direccion de los elementos flex */
+    padding: 0%;                /* Les saca el padding a los elementos para evitar espacios inecesarios */
+    gap: 20px;                  /* Separacion de los elementos en este caso img y links */
+}
+
+.link-nav-admin {
+    list-style: none;       /* Saca el estilo predeterminado de los li */
+}
+
+.link-nav-admin a{
+    display: flex;                              /* Ícono + texto en línea */
+    align-items: center;                        /* Centra verticalmente */
+    gap: 8px;                                   /* Espacio entre ícono y texto */
+    color: #8B4513;                           /* Color de las li ->a */
+    text-decoration: none;                      /* Quita el diseño predeterminado "Subrayado" de los links */
+    font-family: 'Montserrat', sans-serif;  /* Fuente moderna y elegante */
+    font-weight: 500;  /* Un poco más de grosor */
+}
+
+.link-nav-admin a svg {
+  width: 20px;    /* Tamaño del ícono */
+  height: 20px;
+  flex-shrink: 0; /* Evita que se deforme */
+}
+
+.link-nav-admin a:hover{
+    color: #2E8B57;       /* Cambia el color de los li -> a ,al pasar activar el hover "Pasar el mouse" */
+    transition: 0.2s;       /* Efecto de trasision del cambio de color */
+}
+
+
+/* --- Main --- */
+#main-admin{
+    flex: 1;
+    padding-top: 3%;       /* Espacion Interno del contenedor main para que no quede tan pegado al top */
+}
+
+.title-main-admin{
+    color: #2E8B57;       /* Color del h1 del main*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   /* Tipo de fuente */ 
+}
+
+.estadisticas {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.estadisticas-container {
+  display: flex;
+  /*justify-content: center;*/
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.estadistica-item {
+  background-color: #2E8B57;
+  color: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  min-width: 200px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.estadistica-item h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.estadistica-item p {
+  font-size: 1rem;
+}
+
+
+
+
+/* ===== Footer ===== @Aurora */ 
+.site-footer {
+    background: #1f5331;
+    color: #e8f3ea;
+    margin-top: 0px;
+}
+
+.site-footer a {
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition:
+    transform 0.2s ease, color 0.2s ease;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+.footer-brand h3 {
+    margin: 0 0 6px;
+    color: #fff;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin: 0 0 8px;
+    color: #fff;
+}
+
+.footer-links ul,
+.footer-contact ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 6px;
+}
+
+.footer-bottom {
+    background: #184428;
+    padding: 10px 0;
+    padding-left: 2%;
+}
+
+.small {
+    font-size: .9rem;
+    color: #cfe5d6;
+}
+
+@media (max-width: 920px) {
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+}
