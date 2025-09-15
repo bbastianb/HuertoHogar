@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">            
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="css/style-login-registro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="js/usuario.js" defer></script>
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<!-- Favicon (Windows/Chrome/Edge/Firefox) -->
+<link rel="icon" type="image/png" href="img/logo_transparent_1024.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/logo_transparent_1024.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/logo_transparent_1024.png">
+
+<!-- iPhone/iPad -->
+<link rel="apple-touch-icon" sizes="180x180" href="img/logo_icono.png?v=1">
+
+<!-- Safari (macOS) pestaña anclada -->
+<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#2E8B57">
+
+<body id="login-body">
+    <!-- Use el header por que es la barra de navegación"Parte superior de la página" -->
+    <header class="header-login">
+        <!-- Use <nav> para la barra de navegación ya que contiene los enlaces principales de la página -->
+        <nav class="navbar-login">
+            <a href="index.html" class="navbar-logo">
+                <img src="img/logo.png" width="120" alt="Logo Huerto Hogar">
+            </a>
+            <ul class="navbar-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="">Noticias</a></li>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a id="link-registro-login" href="registro.html">Registrarme</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main es la parte principal de la página es mas significativa que un div-->
+    <main class="main-login">
+        <!-- Use <section> para la sección de inicio de sesión ya que es una sección temática dentro del main -->
+        <section class="login-section">
+            <div class="login-icon">
+                <!-- Icono de usuario. Sacado de un web y adaptado por IA-->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#8B4513" width="140" height="140">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+            </div>
+            <h1 class="login-title">Inicio de Sesión</h1>
+            <!-- Use <form> para el formulario de inicio de sesión ya que es un formulario interactivo -->
+            <form class="login-form" action="">
+                <!-- Use <div> para agrupar los elementos del formulario y poder usarlos en el CSS -->
+                <div class="form-group">
+                    <input class="form-input" type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-input" type="password" placeholder="Contraseña" required>
+                </div>
+                <div class="form-links">
+                    <a href="" class="forgot-form-link">¿Olvidaste tu contraseña?</a>
+                </div>
+                <button class="login-btn" type="submit">Ingresar</button>
+                <div class="form-links">
+                    <a href="" class="forgot-form-link">Registrarme</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner container">
+            <div class="footer-brand">
+                <h3>HuertoHogar</h3>
+                <p>Fresco, local y sustentable. Del campo a tu mesa.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>Email: <a href="mailto:hola@huertohogar.cl">hola@huertohogar.cl</a></li>
+                    <li>WhatsApp: <a href="#">+56 9 1234 5678</a></li>
+                    <li>Instagram: <a href="https://www.instagram.com/huertohogar.cl/" target="_blank">@huertohogar.cl</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container small">© <span id="year"></span> HuertoHogar — Todos los derechos reservados.</div>
+        </div>
+    </footer>
+</body>
+</html>

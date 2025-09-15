@@ -1,0 +1,253 @@
+#body-home-admin{
+    background-color:#F7F7F7;   /* Color de fondo del body"Fondo principal" */
+    margin: auto;                 /* Define que el margen del body sea automatico*/
+    display: flex;                /* Hace que los elementos del body sean flex */     
+    flex-wrap: wrap;              /* Hace que cuando el espacio del sea reducido se acomode hacia abajo */
+    flex-direction: column;       /* Cambia la direccion del flexbox en columnas */
+}
+
+.section-principal{
+    display: flex;  /* Define el contenedor principal como un flexbox */
+    gap: 2%;        /* Separacion de los elementos de la section "Entre la barra y lo de mas" */
+}
+
+/* --- Contenedor de la barra lateral --- */
+.nav-admin{
+    background-color:#F7F7F7;                   /* Color de fondo para la barra lateral */ 
+    padding: 1% 3% 3% 3%;                         /* Espacio interno de la barra */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.30);    /* Sombra de la barra */
+    
+   
+    display: flex;       /* Hace que los elementos de la barra sean flexbox */
+    flex-direction: column;     /* Direccion de la barra se lo asigna con el flexbox */
+    justify-content: space-between;    /* Distribuye el espacio de la barra en todo los elemntos que hay en ella */
+
+   /*Fija un ancho para la barra */
+    min-width: 220px;
+    max-width: 220px;
+
+    /* Da reglas a la altura de la barra un min y max */
+    height: auto;      /* Deja que el auto sea automatico */
+    min-height: 97vh;  /* Este es el min para distintos tipos de pantalla*/
+    max-height: none;  /* Asigna que el max del alto sea cualquiera quita la reglas */
+}
+
+.nav-principal-admin div {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-principal-admin{
+    display: flex;              /* Hace que los elementos del menu sea flebox */
+    flex-direction: column;     /* Direccion de los elementos flex */
+    gap: 20px;                  /* Separacion de los elementos en este caso img y links */
+    padding: 0%;                /* Les saca el padding a los elementos para evitar espacios inecesarios */
+}
+
+.nav-secundario-admin{
+    display: flex;
+    flex-direction: column;     /* Direccion de los elementos flex */
+    padding: 0%;                /* Les saca el padding a los elementos para evitar espacios inecesarios */
+    gap: 20px;                  /* Separacion de los elementos en este caso img y links */
+}
+
+.link-nav-admin {
+    list-style: none;       /* Saca el estilo predeterminado de los li */
+}
+
+.link-nav-admin a{
+    display: flex;                              /* Ícono + texto en línea */
+    align-items: center;                        /* Centra verticalmente */
+    gap: 8px;                                   /* Espacio entre ícono y texto */
+    color: #8B4513;                           /* Color de las li ->a */
+    text-decoration: none;                      /* Quita el diseño predeterminado "Subrayado" de los links */
+    font-family: 'Montserrat', sans-serif;  /* Fuente moderna y elegante */
+    font-weight: 500;  /* Un poco más de grosor */
+}
+
+.link-nav-admin a svg {
+  width: 20px;    /* Tamaño del ícono */
+  height: 20px;
+  flex-shrink: 0; /* Evita que se deforme */
+}
+
+.link-nav-admin a:hover{
+    color: #2E8B57;       /* Cambia el color de los li -> a ,al pasar activar el hover "Pasar el mouse" */
+    transition: 0.2s;       /* Efecto de trasision del cambio de color */
+}
+
+#main-admin.container-perfil {
+    flex: 1;   /* Ocupar el resto del espacio disponible */
+    padding: 2% 4%;
+    background-color: #ffffff;   /* Fondo limpio */
+    border-radius: 12px;         /* Bordes suaves */
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15); /* Sombra del container */
+    margin: 2%; 
+    font-family: 'Montserrat', sans-serif; /* Tipo de letra */
+}
+
+#main-admin h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2E8B57;   /* Verde usado en los hover */
+    font-weight: 600;
+    border-bottom: 2px solid #cfe5d6;
+    padding-bottom: 10px;
+}
+
+.perfil-form {
+    display: flex;          /* Activa flexbox*/
+    flex-direction: column; /* Le da la direccion del flex */
+    gap: 20px;              /* Separacion entre elementos */
+}
+
+.campo {
+    display: flex;  /* Activa flex */
+    flex-direction: column; /* Le da la direccion del flex */
+    gap: 6px;               /* Separacion de los elementos */
+}
+
+.campo label { 
+    font-weight: 500;   /* Grosor de la letras */
+    color: #333;      /* Color de letra de los campos */
+}
+
+.campo input {                      
+    padding: 10px;                      /* Espacio interno del input */
+    border: 1px solid #cfe5d6;        /* Color de los bordes */
+    border-radius: 10px;                 /* Redondeo en los bordes */
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campo input:focus {
+    outline: none; 
+    border-color: #2E8B57; /* Cambia el color de imput al entrar en el */
+    box-shadow: 0 0 4px rgba(46,139,87,0.4); /* Modifica la sombra al entrar en el */
+}
+
+
+.grupo {
+    border: 1px solid #ddd;                 /* Grososr y color del borde */
+    border-radius: 10px;                      /* Redonde del borde */
+    padding: 15px;                            /* Espacio interno de container de contraseñas */ 
+    background-color: #f9f9f9;              /* Color de fondo */
+}
+
+
+.acciones {
+    display: flex;          /* Contenedor de botones flex */
+    gap: 15px;              /* Separacion entre los botones */
+    margin-top: 10px;       /* Margen para separar los de los demas container */
+}
+
+.btn-primario {
+    background-color: #2E8B57;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primario:hover {
+    background-color: #246b45;
+    transform: scale(1.02);
+}
+
+.btn-secundario {
+    background-color: #8B4513;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-secundario:hover {
+    background-color: #6f3610;
+    transform: scale(1.02);
+}
+
+/* ===== Mensajes dinámicos ===== */
+.msg {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #2E8B57;
+}
+
+
+
+
+/* ===== Footer ===== @Aurora */ 
+.site-footer {
+    background: #1f5331;
+    color: #e8f3ea;
+    margin-top: 0px;
+}
+
+.site-footer a {
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition:
+    transform 0.2s ease, color 0.2s ease;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+.footer-brand h3 {
+    margin: 0 0 6px;
+    color: #fff;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin: 0 0 8px;
+    color: #fff;
+}
+
+.footer-links ul,
+.footer-contact ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 6px;
+}
+
+.footer-bottom {
+    background: #184428;
+    padding: 10px 0;
+    padding-left: 2%;
+}
+
+.small {
+    font-size: .9rem;
+    color: #cfe5d6;
+}
+
+@media (max-width: 920px) {
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+}

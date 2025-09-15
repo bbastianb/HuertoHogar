@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/style-login-registro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="js/usuario.js" defer></script>
+</head>
+<!-- Favicon (Windows/Chrome/Edge/Firefox) -->
+<link rel="icon" type="image/png" href="img/logo_transparent_1024.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/logo_transparent_1024.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/logo_transparent_1024.png">
+
+<!-- iPhone/iPad -->
+<link rel="apple-touch-icon" sizes="180x180" href="img/logo_icono.png?v=1">
+
+<!-- Safari (macOS) pestaña anclada -->
+<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#2E8B57">
+
+<body class="registro-body">
+    <!-- Use el header por que es la barra de navegación"Parte superior de la página" -->
+    <header class="header-login">
+        <!-- Use <nav> para la barra de navegación ya que contiene los enlaces principales de la página -->
+        <nav class="navbar-login">
+            <a href="index.html" class="navbar-logo">
+                <img src="img/logo.png" width="120" alt="Logo Huerto Hogar">
+            </a>
+            <ul class="navbar-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="">Noticias</a></li>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a id="link-inicio-sesion" href="inicio-sesion.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-registro">
+        <section class="carrusel-registro">
+            <div class="carrusel-container">
+                <div class="carrusel-slide active">
+                    <img src="img/huerto_registro2.jpg" alt="Imagen 1">
+                </div>
+                <div class="carrusel-slide">
+                    <img src="img/zanahorias.jpg" alt="Imagen 2">
+                </div>
+                <div class="carrusel-slide">
+                    <img src="img/espinaca.jpg" alt="Imagen 3">
+                </div>
+            </div>
+            <button class="carrusel-btn prev">❮</button>
+            <button class="carrusel-btn next">❯</button>
+        </section>
+        <section class="registro-section">
+            <h1 class="registro-title">Crear Cuenta</h1>
+            <form class="registro-form" action="">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar Contraseña</label>
+                    <input type="password" id="confirm-password" class="form-input" required>
+                </div>
+                <button type="submit" class="registro-btn">Registrarse</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner container">
+            <div class="footer-brand">
+                <h3>HuertoHogar</h3>
+                <p>Fresco, local y sustentable. Del campo a tu mesa.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>Email: <a href="mailto:hola@huertohogar.cl">hola@huertohogar.cl</a></li>
+                    <li>WhatsApp: <a href="#">+56 9 1234 5678</a></li>
+                    <li>Instagram: <a href="https://www.instagram.com/huertohogar.cl/"target="_blank">@huertohogar.cl</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container small">© <span id="year"></span> HuertoHogar — Todos los derechos reservados.</div>
+        </div>
+    </footer>
+</body>
+
+</html>

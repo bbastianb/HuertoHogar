@@ -1,0 +1,219 @@
+.section-barra-main{
+    display: flex;  /* Lo hace flexible */
+    gap: 2%;        /* Separacion entre la barra y el main */
+}
+
+
+/* --- Contenedor de la barra lateral --- */
+.nav-admin {
+    background-color: #F7F7F7;
+    /* Color de fondo para la barra lateral */
+    padding: 1% 3% 3% 3%;
+    /* Espacio interno de la barra */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.30);
+    /* Sombra de la barra */
+
+
+    display: flex;
+    /* Hace que los elementos de la barra sean flexbox */
+    flex-direction: column;
+    /* Direccion de la barra se lo asigna con el flexbox */
+    justify-content: space-between;
+    /* Distribuye el espacio de la barra en todo los elemntos que hay en ella */
+
+    /*Fija un ancho para la barra */
+    min-width: 220px;
+    max-width: 220px;
+
+    /* Da reglas a la altura de la barra un min y max */
+    height: auto;
+    /* Deja que el auto sea automatico */
+    min-height: 97vh;
+    /* Este es el min para distintos tipos de pantalla*/
+    max-height: none;
+    /* Asigna que el max del alto sea cualquiera quita la reglas */
+}
+
+.nav-principal-admin {
+    display: flex;
+    /* Hace que los elementos del menu sea flebox */
+    flex-direction: column;
+    /* Direccion de los elementos flex */
+    gap: 20px;
+    /* Separacion de los elementos en este caso img y links */
+    padding: 0%;
+    /* Les saca el padding a los elementos para evitar espacios inecesarios */
+}
+
+.nav-principal-admin div {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-secundario-admin {
+    display: flex;
+    flex-direction: column;
+    /* Direccion de los elementos flex */
+    padding: 0%;
+    /* Les saca el padding a los elementos para evitar espacios inecesarios */
+    gap: 20px;
+    /* Separacion de los elementos en este caso img y links */
+}
+
+
+.link-nav-admin {
+    list-style: none;
+    /* Saca el estilo predeterminado de los li */
+}
+
+.link-nav-admin a {
+    display: flex;
+    /* Ícono + texto en línea */
+    align-items: center;
+    /* Centra verticalmente */
+    gap: 8px;
+    /* Espacio entre ícono y texto */
+    color: #8B4513;
+    /* Color de las li ->a */
+    text-decoration: none;
+    /* Quita el diseño predeterminado "Subrayado" de los links */
+    font-family: 'Montserrat', sans-serif;
+    /* Fuente moderna y elegante */
+    font-weight: 500;
+    /* Un poco más de grosor */
+}
+
+.link-nav-admin a svg {
+    width: 20px;
+    /* Tamaño del ícono */
+    height: 20px;
+    flex-shrink: 0;
+    /* Evita que se deforme */
+}
+
+.link-nav-admin a:hover {
+    color: #2E8B57;
+    /* Cambia el color de los li -> a ,al pasar activar el hover "Pasar el mouse" */
+    transition: 0.2s;
+    /* Efecto de trasision del cambio de color */
+}
+
+
+/* --- Main ---*/
+
+main {
+    padding-top: 3%;
+}
+
+#title-listar-clientes{
+    color: #2E8B57;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-left: 25px;
+}
+
+.lista-clientes {
+    display: flex;      /* Se transforma en flex para que se acomoden*/
+    gap: 25px;          /* Separacion entre elementos*/
+    padding: 2%;        /* Espacio interno del contenedor*/
+    flex-wrap: wrap;    /* Para que se acomoden si falta espacio*/
+}
+
+/* Cada cliente cliente item se recibe del js usuario */
+.cliente-item {
+    background-color: #f0f8f5;       /* Fondo suave */
+    border-left: 5px solid #2E8B57;  /* Línea de del borde */
+    padding: 15px 20px;                /* Espacio de la tarjeta de los clientes */           
+    border-radius: 10px;               /* Redondea el borde de la tarjeta */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);      /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animacion al pasar el mouse para que no sea tan fuerte*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cliente-item strong {
+    color: #2E8B57;         /* Color a las secciones de la tarjeta*/
+}
+
+.cliente-item p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.cliente-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+
+/* ===== Footer ===== @Aurora */
+.site-footer {
+    background: #1f5331;
+    color: #e8f3ea;
+    margin-top: 0px;
+}
+
+.site-footer a {
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition:
+        transform 0.2s ease, color 0.2s ease;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+.footer-brand h3 {
+    margin: 0 0 6px;
+    color: #fff;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin: 0 0 8px;
+    color: #fff;
+}
+
+.footer-links ul,
+.footer-contact ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 6px;
+}
+
+.footer-bottom {
+    background: #184428;
+    padding: 10px 0;
+    padding-left: 2%;
+}
+
+.small {
+    font-size: .9rem;
+    color: #cfe5d6;
+}
+
+@media (max-width: 920px) {
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+}

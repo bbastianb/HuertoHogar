@@ -1,0 +1,514 @@
+/*Reglas básicas para todos quita márgenes y rellenos predeterminados*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Login*/
+/* Fondo general para el login */
+#login-body {
+    background-color: #F7F7F7;
+    background-image: url('../img/fondologin.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+
+/* Header y navegación */
+.header-login {
+    /*Hace que le header"Barra" use siempre el 100% del ancho de la página*/
+    width: 100%;
+    /*Fondo del header"Barra"*/
+    background-color: rgba(247, 247, 247,0.95);
+    /*Sombra debajo del header"Barra"*/
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
+
+}
+
+.navbar-login {
+    /*Activa el modo flexbox para la barra de navegación*/
+    display: flex;
+    /*Alinea los items verticalmente al centro de box en este caso*/
+    align-items: center;
+    /*Espacio entre logo y enlaces. Los distribuye de izquierda a derecha los box que estan dentro en este caso la etiqueta a(logo con link) y ul(links)*/
+    justify-content: space-between;
+    /*Limita el ancho maximo del contenedor y lo centra en la pagina*/
+    max-width: 1350px;
+    /**Centrado horizontal, se uso para centrar el contenido en la pagina**/
+    margin: 0 auto;
+    /*Relleno interno del contenedor, se uso para crear espacio alrededor del contenido*/
+    padding: 10px 22px;
+    /*Permite que los elementos dentro del contenedor se ajusten a la siguiente línea si no hay suficiente espacio horizontal*/
+    flex-wrap: wrap;
+}
+
+#link-registro-login {
+    /*Para el header del login en el boton de registrarse */
+    border-radius: 12px;
+    background-color: #2E8B57;
+    color: #F7F7F7;
+}
+
+#link-registro-login:hover {
+    /*Modificacion del boton/link registrarse de login header*/
+    background-color: #8B4513;
+    transition: 0.2s;
+}
+
+.navbar-links {
+    /*Quita los puntos de las listas predeterminadas*/
+    list-style: none;
+    /*Activa el modo flexbox para los enlaces de la barra de navegación*/
+    display: flex;
+    /*Espacio entre los enlaces*/
+    gap: 15px;
+    /*Permite que los elementos dentro del contenedor se ajusten a la siguiente línea si no hay suficiente espacio horizontal*/
+    flex-wrap: wrap;
+}
+
+.navbar-links a {
+    /*Color de los enlaces*/
+    color: #2E8B57;
+    /*Quita el subrayado de los enlaces*/
+    text-decoration: none;
+    /*Fuente y tamaño de los enlaces*/
+    /*Modificar a los del profe*/
+    font-family: "Montserrat", sans-serif;
+    /*Tamaño de fuente*/
+    font-size: 18px;
+    font-weight: 500;
+    /*Transición suave para el cambio de color al pasar el mouse*/
+    transition: color 0.2s;
+    /*Margen interno de los links de header*/
+    padding: 9px;
+}
+
+.navbar-links a:hover {
+    /*Color de los enlaces al pasar el mouse*/
+    color: #8B4513;
+}
+
+
+/* Main y sección de login*/
+.main-login {
+    /*Hace que el contenedor principal del login use flexbox*/
+    display: flex;
+    /*Centra el contenido horizontalmente*/
+    justify-content: center;
+    /*Centra el contenido verticalmente*/
+    align-items: center;
+    /*Espacio alrededor del contenido*/
+    min-height: calc(100vh - 80px);
+    /* Ajusta según el alto del header */
+}
+
+.login-section {
+    /*Le da un fondo blanco semi-transparente a la sección de login*/
+    background: rgba(255, 255, 255, 0.94);
+    /*Bordes redondeados*/
+    border-radius: 16px;
+    /*Sombra alrededor del contenedor del login*/
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+    /*Relleno interno del contenedor del login solo estético*/
+    padding: 45px 52px;
+    /*Usa flexbox para organizar los elementos dentro del contenedor del login*/
+    display: flex;
+    /*Organiza los elementos en una columna*/
+    flex-direction: column;
+    /*alinea los elementos horizontalmente al centro*/
+    align-items: center;
+    /*Ancho mínimo y máximo del contenedor del login para diferentes tamaños de pantalla los establece*/
+    min-width: 340px;
+    max-width: 380px;
+    /*Margen superior para separar el contenedor del login del header*/
+    margin-top: 3%;
+}
+
+.login-icon {
+    /*Le da un margen inferior al icono del usuario para separar este box de siguiente*/
+    margin-bottom: 16px;
+}
+
+.login-title {
+    /*Color del h1 "Inicio de Sesión"*/
+    color: #8B4513;
+    /*Fuente y tamaño del h1 "Inicio de Sesión"*/
+    font-family: "Playfair Display", serif;
+
+    font-weight: 600;
+    font-size: 2rem;
+
+    /*Margen inferior para separar el título del formulario*/
+    margin-bottom: 24px;
+    /*Alinea el texto al centro*/
+    text-align: center;
+}
+
+.login-form {
+    /*Hace que el formulario use todo el ancho disponible dentro de su contenedor*/
+    width: 100%;
+    /*Usa flexbox para organizar los elementos dentro del formulario*/
+    display: flex;
+    /*Organiza los elementos en una columna*/
+    flex-direction: column;
+    /*Espacio entre los elementos del formulario*/
+    gap: 18px;
+}
+
+.form-group {
+    /*Hace que el grupo de formulario use todo el ancho disponible dentro de su contenedor*/
+    /*Solo para evitar espacios innecesarios*/
+    width: 100%;
+}
+
+.form-input {
+    /*Fondo semi-transparente para los inputs*/
+    background: rgba(255, 255, 255, 0.1);
+    /*Cambiar el 3 para la transparencia*/
+    /*Hace que los inputs usen todo el ancho disponible dentro de su contenedor*/
+    width: 100%;
+    /*Relleno interno del input para que el texto no esté pegado a los bordes*/
+    padding: 10px 14px;
+    /*Bordes del input con color y grosor*/
+    border: 1.5px solid #8B4513;
+    /*Bordes redondeados del input*/
+    border-radius: 6px;
+    /*Fuente, tamaño y estilo del texto dentro del input*/
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    /*Quita el contorno del input al hacer focus(entrar al input)*/
+    outline: none;
+    /*Transición suave para el cambio de color del borde al hacer focus(entrar al input)*/
+    transition: border-color 0.2s;
+}
+
+.form-input:focus {
+    /*Color de los bordes del input al hacer focus(entrar al input)*/
+    border-color: #2E8B57;
+}
+
+.form-links {
+    /*Alinea los enlaces dentro del formulario al centro "Olvidaste tu contraseña?"*/
+    text-align: center;
+}
+
+.forgot-form-link {
+    /*Color del enlace "Olvidaste tu contraseña?"*/
+    color: #2E8B57;
+    /*Tamaño del enlace "Olvidaste tu contraseña?"*/
+    font-size: 0.95rem;
+    /*Quita el subrayado del enlace*/
+    text-decoration: none;
+    /*Transición suave para el cambio de color al pasar el mouse*/
+    transition: color 0.2s;
+}
+
+.forgot-form-link:hover {
+    /*Color del enlace al pasar el mouse*/
+    color: #8B4513;
+    /*Subraya el enlace al pasar el mouse*/
+    text-decoration: underline;
+}
+
+.login-btn {
+    /*Hace que el botón use todo el ancho disponible dentro de su contenedor*/
+    width: 100%;
+    /*Relleno interno del botón para hacerlo más grande y cómodo de usar*/
+    padding: 12px 0;
+    /*Color de fondo del botón*/
+    background-color: #2E8B57;
+    /*Color del texto del botón*/
+    color: #fff;
+    /*Quita el borde predeterminado del botón*/
+    border: none;
+    /*Bordes redondeados del botón*/
+    border-radius: 12px;
+    /*Tamaño y estilo del texto dentro del botón*/
+    font-size: 1.1rem;
+    font-family: "Montserrat", sans-serif;
+    /*Hace que el texto del botón sea un poco más grueso*/
+    font-weight: 600;
+    /*Cambia el cursor al pasar sobre el botón para indicar que es clickeable*/
+    cursor: pointer;
+    /*Transición suave para el cambio de color de fondo al pasar el mouse*/
+    transition: background 0.2s;
+}
+
+.login-btn:hover {
+    /*Color de fondo del botón al pasar el mouse*/
+    background-color: #8B4513;
+}
+
+
+/*Registro*/
+
+/*Se uso el mismo header de login para mantener la coherencia en el diseño*/
+
+.main-registro {
+    /*Hace que el contenedor principal del registro use flexbox*/
+    display: flex;
+    /*Centra el contenido horizontalmente*/
+    justify-content: center;
+    /*Centra el contenido verticalmente*/
+    align-items: center;
+    /*Espacio alrededor del contenido*/
+    min-height: calc(100vh - 80px);
+    /* Ajusta según el alto del header */
+    /*Margen superior para separar el contenedor del registro del header*/
+    margin-top: 2%;
+    padding-right: 50px;
+    padding-left: 50px;
+    /*Seperacion entre los elementos del main*/
+    gap: 4%;
+}
+
+#link-inicio-sesion {
+    /*Para el header del registro */
+    border-radius: 12px;
+    background-color: #2E8B57;
+    color: #F7F7F7;
+}
+
+#link-inicio-sesion:hover {
+    /*Modificacion del boton/link inicio de sesion header*/
+    background-color: #8B4513;
+    transition: 0.2s;
+}
+
+/* --- Estilos para el Carrusel de Registro --- */
+.carrusel-registro {
+  position: relative;          /* Posiciona los botones dentro del carrusel */
+  width: 100%;                 /* El carrusel ocupa todo el ancho disponible */
+  max-width: 800px;            /* Tamaño máximo del carrusel (ajústalo a gusto) */
+  height: 530px;               /* Alto fijo del carrusel */
+  overflow: hidden;            /* Oculta cualquier contenido que se salga del área */
+  border-radius: 12px;         /* Bordes redondeados para darle estilo */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25); /* Sombra para resaltar el carrusel */
+}
+
+.carrusel-container {
+  display: flex;               /* Organiza los slides en fila */
+  width: 100%;                 /* Ocupar el 100% del carrusel */
+  height: 100%;                /* Ajusta al alto del carrusel */
+}
+
+.carrusel-slide {
+  position: absolute;       /* se apilan unos sobre otros */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;               /* invisibles por defecto */
+  transition: opacity 0.8s ease-in-out; /* animación suave */
+}
+
+.carrusel-slide.active {
+  opacity: 1;               /* el slide activo aparece */
+  z-index: 1;               /* se muestra sobre los demás */
+}
+
+.carrusel-slide img {
+  width: 100%;                 /* Imagen ocupa todo el ancho del slide */
+  height: 100%;                /* Imagen ocupa toda la altura del slide */
+  object-fit: cover;           /* Hace que la imagen se recorte para llenar el espacio sin deformarse */
+}
+
+/* --- Botones del carrusel --- */
+.carrusel-btn {
+  position: absolute;          /* Posición absoluta dentro del carrusel */
+  top: 50%;                    /* Centra el botón verticalmente */
+  transform: translateY(-50%); /* Ajuste para que quede perfectamente centrado */
+  background: rgba(0,0,0,0.5); /* Fondo semi-transparente */
+  color: white;                /* Color del ícono (flechas) */
+  border: none;                /* Sin bordes */
+  font-size: 2rem;             /* Tamaño grande de las flechas */
+  cursor: pointer;             /* Cambia el cursor al pasar encima */
+  padding: 5px 10px;           /* Espaciado interno del botón */
+  border-radius: 50%;          /* Forma redondeada (círculo) */
+  transition: background 0.3s; /* Efecto suave al pasar el mouse */
+  z-index: 10;                 /* Asegura que los botones estén por encima de las imágenes */
+}
+
+.carrusel-btn:hover {
+  background: rgba(0,0,0,0.8); /* Fondo más oscuro al pasar el mouse */
+}
+
+.carrusel-btn.prev {
+  left: 10px;                  /* Ubicación a la izquierda */
+}
+
+.carrusel-btn.next {
+  right: 10px;                 /* Ubicación a la derecha */
+}
+
+
+.registro-section {
+    /*Le da un fondo blanco al contenedor del registro*/
+    background-color: rgb(255, 255, 255);
+    /*Activa el modo flexbox para organizar los elementos dentro del contenedor del registro*/
+    display: flex;
+    /*Organiza los elementos en una columna*/
+    flex-direction: column;
+    /*Alinea los elementos horizontalmente al centro*/
+    align-items: center;
+    /*redeondea los bordes del contenedor del registro*/
+    border-radius: 16px;
+    /*Sombra alrededor del contenedor del registro*/
+    box-shadow: 0 3px 11px rgba(0, 0, 0, 0.30);
+    /*espacio interno del contenedor del registro*/
+    padding: 48px 58px;
+    /*margen alrededor del contenedor del registro*/
+    margin: 10px;
+    min-width: 400px;
+    max-width: 400px;
+}
+
+.registro-title {
+    /*Color del h1 "Crear Cuenta"*/
+    color: #8B4513;
+    /*Fuente y tamaño del h1 "Crear Cuenta"*/
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 2rem;
+    /*Margen inferior para separar el título del formulario*/
+    margin-bottom: 40px;
+    /*Alinea el texto al centro*/
+    margin-top: 20px;
+    /*Alinea el texto al centro*/
+    text-align: center;
+}
+
+.registro-form {
+    /*Hace que el formulario use todo el ancho disponible dentro de su contenedor*/
+    width: 100%;
+    /*Usa flexbox para organizar los elementos dentro del formulario*/
+    display: flex;
+    /*Organiza los elementos en una columna*/
+    flex-direction: column;
+    /*Espacio entre los elementos del formulario*/
+    gap: 10px;
+    font-family: "Playfair Display", serif;
+}
+
+.form-group input {
+    /*Quita la forma predeterminada de los input del form para que no sean redondos*/
+    border-radius: 0px;
+    /*Desactiva los bordes de los input*/
+    border: none;
+    /*Le da una linea abajo de los input*/
+    border-bottom: 2px solid #8B4513;
+    /*Controla los espacios interno de los input*/
+    padding: 10px;
+}
+
+.form-group label {
+    /*Tipo de letras para el formulario no es la especificada pero mejora la legibilidad*/
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    /*Color de los label del formulario*/
+    color: #8B4513;
+    /*Le da un espacio en la parte de abajo del los label*/
+    margin-bottom: 2px;
+    /*Ancho de las letras de los label*/
+    font-weight: 500;
+}
+
+.registro-btn {
+    /*Le da una separacion al boton de registrarse en la parte superior ademas de ajustarlo automaticamente al centro*/
+    margin: 20px auto 0 auto;
+    /*Color de la letra del bontom*/
+    color: #F7F7F7;
+    /*Color de fondo del boton*/
+    background-color: #2E8B57;
+    /*Le da separacion "Ancho visible del boton"*/
+    padding: 12px;
+    /*Redondea el borde del boton*/
+    border-radius: 12px;
+    /*Le quita el border del boton que viene predeterminado*/
+    border: none;
+    /*Tamaño y Grosor de la fuente*/
+    font-weight: 700;
+    font-size: 1.1rem;
+    /*Ancho del boton */
+    width: 85%;
+
+}
+
+.registro-btn:hover {
+    /*Cambia el color del fondo del boton al pasar el mouse*/
+    background-color: #8B4513;
+    /*Pambia el diseño del cursor al pasarlo por encima*/
+    cursor: pointer;
+    /*Animacion del boton cuando cambia el color "Tiempo"*/
+    transition: 0.2s;
+}
+
+
+/* ===== Footer ===== */
+.site-footer {
+    background: #1f5331;
+    color: #e8f3ea;
+    margin-top: 40px;
+}
+
+.site-footer a {
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition:
+    transform 0.2s ease, color 0.2s ease;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+.footer-brand h3 {
+    margin: 0 0 6px;
+    color: #fff;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin: 0 0 8px;
+    color: #fff;
+}
+
+.footer-links ul,
+.footer-contact ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 6px;
+}
+
+.footer-bottom {
+    background: #184428;
+    padding: 10px 0;
+    padding-left: 2%;
+}
+
+.small {
+    font-size: .9rem;
+    color: #cfe5d6;
+}
+
+@media (max-width: 920px) {
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+}
