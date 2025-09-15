@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>HuertoHogar - Frescura del campo a tu mesa</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/pages/inicio.css">
-<link rel="stylesheet" href="css/overrides.css">
 
-<!-- Nota: css/style.legacy.css es respaldo y NO se carga. -->
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>HuertoHogar - Frescura del campo a tu mesa</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/inicio.css">
+  <link rel="stylesheet" href="css/overrides.css">
+
+  <!-- Nota: css/style.legacy.css es respaldo y NO se carga. -->
 </head>
 <!-- Favicon (Windows/Chrome/Edge/Firefox) -->
 <link rel="icon" type="image/png" href="img/logo_icono.png?v=1">
@@ -26,7 +29,7 @@
 <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#2E8B57">
 
 <body class="page-inicio">
-  
+
   <header class="nav">
     <!-- Logo -->
     <div class="nav-logo">
@@ -34,194 +37,195 @@
         <img src="img/huertologo.jpeg" alt="HuertoHogar">
       </a>
     </div>
-  
-    
+
+
     <nav class="nav_links">
       <a href="contacto.html">Contacto</a>
       <a href="noticias.html">Noticias</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="blog.html">Blog</a>
-      <a class="btn btn--primary" href="contacto.html">Iniciar sesión</a>
+      <a class="btn btn--primary" href="inicio-sesion.html">Iniciar sesión</a>
     </nav>
   </header>
-  
-<section class="container" id="portada-carrusel">
-<div aria-label="Carrusel de imágenes de portada" class="carousel">
-<div class="carousel__track">
-<div class="carousel__slide is-active"><img alt="Bananas" src="img/pimentones2.jpg"/></div>
-<div class="carousel__slide"><img alt="Manzanas en bolsas" src="img/manzanas-bolsas.jpg"/></div>
-<div class="carousel__slide"><img alt="Manzanas en árbol" src="img/espinaca2.jpg"/></div>
-<div class="carousel__slide"><img alt="Manzanas en manos" src="img/miel5.jpg"/></div>
-</div>
-<button aria-label="Anterior" class="carousel__btn prev">❮</button>
-<button aria-label="Siguiente" class="carousel__btn next">❯</button>
-<div class="carousel__dots"></div>
-</div>
-</section>
-<section class="hero">
-<button class="btn btn--accent" href="catalogo">Ver catálogo</button>
-</section>
-<script data-huerto="carousel">
-(function(){
-  const carousel = document.querySelector('.carousel');
-  if(!carousel) return;
-  const track = carousel.querySelector('.carousel__track');
-  const slides = Array.from(track.children);
-  const prevBtn = carousel.querySelector('.carousel__btn.prev');
-  const nextBtn = carousel.querySelector('.carousel__btn.next');
-  const dotsContainer = carousel.querySelector('.carousel__dots');
 
- 
-  slides.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.className = 'dot' + (i === 0 ? ' is-active' : '');
-    dot.setAttribute('aria-label', 'Ir a la diapositiva ' + (i+1));
-    dot.addEventListener('click', () => goTo(i));
-    dotsContainer.appendChild(dot);
-  });
-  const dots = Array.from(dotsContainer.children);
-
-  let index = 0;
-  let timer;
-
-  function update(){
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    track.style.transform = `translateX(-${index * slideWidth}px)`;
-    slides.forEach((s, i) => s.classList.toggle('is-active', i === index));
-    dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
-  }
-
-  function next(){
-    index = (index + 1) % slides.length;
-    update();
-  }
-  function prev(){
-    index = (index - 1 + slides.length) % slides.length;
-    update();
-  }
-  function goTo(i){
-    index = i % slides.length;
-    update();
-    restartAuto();
-  }
-
-  function startAuto(){
-    timer = setInterval(next, 4000);
-  }
-  function stopAuto(){
-    clearInterval(timer);
-  }
-  function restartAuto(){
-    stopAuto(); startAuto();
-  }
-
-  nextBtn.addEventListener('click', () => { next(); restartAuto(); });
-  prevBtn.addEventListener('click', () => { prev(); restartAuto(); });
-  
-  window.addEventListener('resize', update);
+  <section class="container" id="portada-carrusel">
+    <div aria-label="Carrusel de imágenes de portada" class="carousel">
+      <div class="carousel__track">
+        <div class="carousel__slide is-active"><img alt="Bananas" src="img/pimentones2.jpg" /></div>
+        <div class="carousel__slide"><img alt="Manzanas en bolsas" src="img/manzanas-bolsas.jpg" /></div>
+        <div class="carousel__slide"><img alt="Manzanas en árbol" src="img/espinaca2.jpg" /></div>
+        <div class="carousel__slide"><img alt="Manzanas en manos" src="img/miel5.jpg" /></div>
+      </div>
+      <button aria-label="Anterior" class="carousel__btn prev">❮</button>
+      <button aria-label="Siguiente" class="carousel__btn next">❯</button>
+      <div class="carousel__dots"></div>
+    </div>
+  </section>
+  <section class="hero">
+    <button  class="btn btn--accent" onclick="window.location.href='listado-producto.html'">Ver catálogo</button>
+  </section>
+  <script data-huerto="carousel">
+    (function () {
+      const carousel = document.querySelector('.carousel');
+      if (!carousel) return;
+      const track = carousel.querySelector('.carousel__track');
+      const slides = Array.from(track.children);
+      const prevBtn = carousel.querySelector('.carousel__btn.prev');
+      const nextBtn = carousel.querySelector('.carousel__btn.next');
+      const dotsContainer = carousel.querySelector('.carousel__dots');
 
 
-  function setWidths(){
-    const slideWidth = carousel.getBoundingClientRect().width;
-    slides.forEach(s => s.style.width = slideWidth + 'px');
-    track.style.width = (slideWidth * slides.length) + 'px';
-    update();
-  }
-  setWidths();
-  startAuto();
-})();
-</script>
-<section class="container" id="productos">
-<h2>Nuestros Productos</h2>
-<div class="grid-productos">
-<article class="card-producto">
-<img alt="Zanahorias" src="img/zanahoria.jpg"/>
-<div class="card-producto__body">
-<h3>Zanahorias Frescas</h3>
-<p>Ricas en vitaminas, ideales para ensaladas.</p>
-<span class="precio">$990/kg</span>
-<button class="btn btn--primary">Agregar al carrito</button>
-</div>
-</article>
-<article class="card-producto">
-<img alt="Espinaca" src="img/espinaca.jpg"/>
-<div class="card-producto__body">
-<h3>Espinaca Orgánica</h3>
-<p>Hojas verdes nutritivas y frescas.</p>
-<span class="precio">$700/bolsa 500 gr.</span>
-<button class="btn btn--primary">Agregar al carrito</button>
-</div>
-</article>
-<article class="card-producto">
-<img alt="Pimentones" src="img/pimenton.jpg"/>
-<div class="card-producto__body">
-<h3>Pimentones Variados</h3>
-<p>Colores vibrantes para todas tus comidas.</p>
-<span class="precio">$1.500/kg</span>
-<button class="btn btn--primary">Agregar al carrito</button>
-</div>
-</article>
-<article class="card-producto">
-<img alt="Miel" src="img/miel.jpg"/>
-<div class="card-producto__body">
-<h3>Miel Natural</h3>
-<p>Endulzante natural directo del productor.</p>
-<span class="precio">$5.000/500 gr.</span>
-<button class="btn btn--primary">Agregar al carrito</button>
-</div>
-</article>
-<article class="card-producto">
-<img alt="Manzanas" src="img/manzanas.jpg"/>
-<div class="card-producto__body">
-<h3>Manzanas Rojas</h3>
-<p>Dulces, jugosas y recién cosechadas.</p>
-<span class="precio">$2.490/kg</span>
-<button class="btn btn--primary">Agregar al carrito</button>
-</div>
-</article>
-<article class="card-producto">
-<img alt="Naranjas" src="img/naranja.jpg"/>
-<div class="card-producto__body">
-<h3>Naranjas</h3>
-<p>Perfectas para jugos naturales llenos de energía.</p>
-<span class="precio">$1.990/kg</span>
-<button class="btn btn--primary">Agregar al carrito</button>
-</div>
-</article>
-</div>
-</section>
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'dot' + (i === 0 ? ' is-active' : '');
+        dot.setAttribute('aria-label', 'Ir a la diapositiva ' + (i + 1));
+        dot.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(dot);
+      });
+      const dots = Array.from(dotsContainer.children);
 
-<footer class="site-footer">
-<div class="footer-inner container">
-<div class="footer-brand">
-<h3>HuertoHogar</h3>
-<p>Fresco, local y sustentable. Del campo a tu mesa.</p>
-</div>
-<div class="footer-links">
-<h4>Secciones</h4>
-<ul>
-<li><a href="index.html">Inicio</a></li>
-<li><a href="blog.html">Blog</a></li>
-<li><a href="nosotros.html">Nosotros</a></li>
-<li><a href="noticias.html">Noticias</a></li>
-<li><a href="contacto.html">Contacto</a></li>
-</ul>
-</div>
-<div class="footer-contact">
-<h4>Contacto</h4>
-<ul>
-<li>Email: <a href="mailto:hola@huertohogar.cl">hola@huertohogar.cl</a></li>
-<li>WhatsApp: <a href="#">+56 9 1234 5678</a></li>
-<li>Instagram: <a href="#">@huerto.hogar</a></li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom">
-<div class="container small">© <span id="year"></span> HuertoHogar — Todos los derechos reservados.</div>
-</div>
-</footer>
-<script data-huerto="footer-year">
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+      let index = 0;
+      let timer;
+
+      function update() {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(-${index * slideWidth}px)`;
+        slides.forEach((s, i) => s.classList.toggle('is-active', i === index));
+        dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
+      }
+
+      function next() {
+        index = (index + 1) % slides.length;
+        update();
+      }
+      function prev() {
+        index = (index - 1 + slides.length) % slides.length;
+        update();
+      }
+      function goTo(i) {
+        index = i % slides.length;
+        update();
+        restartAuto();
+      }
+
+      function startAuto() {
+        timer = setInterval(next, 4000);
+      }
+      function stopAuto() {
+        clearInterval(timer);
+      }
+      function restartAuto() {
+        stopAuto(); startAuto();
+      }
+
+      nextBtn.addEventListener('click', () => { next(); restartAuto(); });
+      prevBtn.addEventListener('click', () => { prev(); restartAuto(); });
+
+      window.addEventListener('resize', update);
+
+
+      function setWidths() {
+        const slideWidth = carousel.getBoundingClientRect().width;
+        slides.forEach(s => s.style.width = slideWidth + 'px');
+        track.style.width = (slideWidth * slides.length) + 'px';
+        update();
+      }
+      setWidths();
+      startAuto();
+    })();
+  </script>
+  <section class="container" id="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="grid-productos">
+      <article class="card-producto">
+        <img alt="Zanahorias" src="img/zanahoria.jpg" />
+        <div class="card-producto__body">
+          <h3>Zanahorias Frescas</h3>
+          <p>Ricas en vitaminas, ideales para ensaladas.</p>
+          <span class="precio">$990/kg</span>
+          <button class="btn btn--primary">Agregar al carrito</button>
+        </div>
+      </article>
+      <article class="card-producto">
+        <img alt="Espinaca" src="img/espinaca.jpg" />
+        <div class="card-producto__body">
+          <h3>Espinaca Orgánica</h3>
+          <p>Hojas verdes nutritivas y frescas.</p>
+          <span class="precio">$700/bolsa 500 gr.</span>
+          <button class="btn btn--primary">Agregar al carrito</button>
+        </div>
+      </article>
+      <article class="card-producto">
+        <img alt="Pimentones" src="img/pimenton.jpg" />
+        <div class="card-producto__body">
+          <h3>Pimentones Variados</h3>
+          <p>Colores vibrantes para todas tus comidas.</p>
+          <span class="precio">$1.500/kg</span>
+          <button class="btn btn--primary">Agregar al carrito</button>
+        </div>
+      </article>
+      <article class="card-producto">
+        <img alt="Miel" src="img/miel.jpg" />
+        <div class="card-producto__body">
+          <h3>Miel Natural</h3>
+          <p>Endulzante natural directo del productor.</p>
+          <span class="precio">$5.000/500 gr.</span>
+          <button class="btn btn--primary">Agregar al carrito</button>
+        </div>
+      </article>
+      <article class="card-producto">
+        <img alt="Manzanas" src="img/manzanas.jpg" />
+        <div class="card-producto__body">
+          <h3>Manzanas Rojas</h3>
+          <p>Dulces, jugosas y recién cosechadas.</p>
+          <span class="precio">$2.490/kg</span>
+          <button class="btn btn--primary">Agregar al carrito</button>
+        </div>
+      </article>
+      <article class="card-producto">
+        <img alt="Naranjas" src="img/naranja.jpg" />
+        <div class="card-producto__body">
+          <h3>Naranjas</h3>
+          <p>Perfectas para jugos naturales llenos de energía.</p>
+          <span class="precio">$1.990/kg</span>
+          <button class="btn btn--primary">Agregar al carrito</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <h3>HuertoHogar</h3>
+        <p>Fresco, local y sustentable. Del campo a tu mesa.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <ul>
+          <li>Email: <a href="mailto:hola@huertohogar.cl">hola@huertohogar.cl</a></li>
+          <li>WhatsApp: <a href="#">+56 9 1234 5678</a></li>
+          <li>Instagram: <a href="#">@huerto.hogar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container small">© <span id="year"></span> HuertoHogar — Todos los derechos reservados.</div>
+    </div>
+  </footer>
+  <script data-huerto="footer-year">
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
+
 </html>

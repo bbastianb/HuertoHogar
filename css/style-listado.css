@@ -1,0 +1,322 @@
+*::after,
+*::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#body-product {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #333;
+    font-family: 'Montserrat',sans-serif;
+
+    background-image: url('../img/fondo2.jpg');/* Ruta correcta */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    
+    height: 100vh;
+}
+.content-all h1{
+    color: #8B4513;
+}
+/* Alinea logo + título a la izquierda y carrito a la derecha */
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding-block: .75rem; /* opcional */
+}
+
+/* Grupo logo + h1 */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+}
+
+/* Tamaño del logo */
+.brand-logo{
+  width: 40px;
+  height:40px;
+  object-fit:contain;
+  display:block;
+}
+
+
+/* Ajustes del título si quieres que no pegue tanto */
+.titulo{
+  margin:0;                /* elimina margen por defecto */
+  line-height:1;           /* compacta verticalmente */
+}
+
+/* Opcional: en pantallas pequeñas, reduce un poco el título */
+@media (max-width: 480px){
+  .titulo{ font-size:1.25rem; }
+  .brand-logo{ width:32px; height:32px; }
+}
+
+h2{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.info-producto p.precio,.info-producto p.stock{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    
+}
+.icon-cart{
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+.icon-cart:hover{
+    cursor: pointer;
+}
+img{
+    max-width: 100%;
+}
+
+/*Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 40px;
+}
+.container-icon{
+    position: relative;
+}
+.count-producto{
+    position: absolute;
+    top:55%;
+    right: 0;
+
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+#contador-productos{
+    font-size: 12px;
+}
+.container-cart-producto{
+    position:absolute;
+    top:50px;
+    right: 0;
+
+    background-color: #fff;
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.20);
+    border-radius: 10px;
+}
+
+.cart-producto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+
+    border-bottom: 1px solid rgba(0,0,0,0.20);
+}
+.info-cart-product{
+    display: flex;
+    justify-content: space-between;
+   flex:0.8
+}
+.titulo-producto-carrito{
+    font-size: 20px;
+
+}
+.precio-producto-carrito{
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+.cantidad-producto-carrito{
+    font-size: 20px;
+    font-weight: 400;
+}
+.icon-close{
+    width: 25px;
+    height: 25px;
+
+}
+.icon-close:hover{
+    stroke: red;
+    cursor: pointer;
+}
+.cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap:20px;
+}
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+.total-pagar{
+    font-size: 20px;
+    font-weight: 900;
+}
+.hidden-cart{
+    display: none;
+}
+/*Main */
+.container-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    
+}
+@media (max-width: 768px){
+    .container-items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.item{
+    border-radius: 10px;
+    background-color: #f7f7f7;
+}
+
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.20);
+}
+
+.item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+.item figure{
+    overflow: hidden;
+}
+.item:hover img{
+    transform: scale(1.2);
+}
+.info-producto{
+    padding:15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    height: 100%;
+}
+.info-producto p.desc{
+    border-top: 4px solid rgba(0,0,0,0.50);
+    color:#666666;
+}
+.precio{
+    font-size: 18px;
+    font-weight: 900;
+}
+.info-producto button{
+    border:none;
+    background: none;
+    background-color:#2E8B57;
+    color: #000;;
+    padding:15px 10px;
+    cursor:pointer;
+    margin-top: auto;
+    border-radius: 18px;
+}
+.info-producto button:hover{
+    background-color: #3CB371;
+    color: #0c0c0c;
+}
+.item{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* O un alto fijo como height: 100%; si usas grid */
+}
+.cart-empty{
+    padding: 20px;
+    text-align: center;
+}
+.hidden{
+    display: none;
+}
+/*Filtros*/
+.filters{
+  display:flex;
+  gap:.5rem;
+  flex-wrap:wrap;
+  margin:1rem 0 1.25rem;
+}
+.filtro{
+  padding:.45rem .9rem;
+  border:1px solid #ddd;
+  border-radius:999px;
+  background:#fff;
+  cursor:pointer;
+  font-weight:600;
+}
+.filtro:hover{ border-color:#bbb; }
+.filtro.active{
+  background:#2E8B57;     /* tu verde */
+  color:#fff;
+  border-color:#2E8B57;
+}
+
+/*nav */
+header.nav{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+ display: flex; justify-content: space-between; align-items: center;
+  /* empuja a ambos lados hasta los bordes del viewport */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: auto;
+
+  /* alinea el contenido interno con tu layout de 1200px */
+  
+  padding: .9rem 1.2rem;
+}
+.nav-logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  
+
+  .nav-logo img {
+    height: 60px !important;     
+    max-height: 100%;
+    width: auto !important;       
+    max-width: none !important;   
+    object-fit:fill;
+    display: block;
+  }
+.nav_links a{
+    color:black;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-weight:500 ;
+}
+.nav_links a:hover{color: var(--accent);}
+/* --- NAV a pantalla completa (full-bleed) --- */

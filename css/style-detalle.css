@@ -1,0 +1,204 @@
+@import url('style-listado.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  max-width: 1200px;
+  margin: 0 auto;   /* centra todo y deja bandas a los lados */
+}
+
+#body-product{
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+img{
+    max-width: 100%;
+}
+@media (max-width: 900px){
+  #prodetails{
+    flex-direction: column;
+  }
+  #prodetails .single-pro-image,
+  #prodetails .single-pro-details{
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+
+#prodetails .single-pro-image{
+    flex: 1 1 55%;          /* antes width:70% */
+  margin-right: 0;  
+
+}
+#prodetails .single-pro-image img{
+    width: 80%;
+       /* evita recortes/estiramientos */
+  display: block;
+  border-radius: 12px;
+  margin-left: 25px ;
+    
+}
+#prodetails {
+     display: flex;
+  gap: 2rem;              /* en vez de margin-right */
+  margin-top: 20px;
+  align-items: flex-start;
+}
+#prodetails .single-pro-details{
+    width: 50%;
+    padding-top: 30px;
+}
+#prodetails .single-pro-details h4{
+    padding: 40px 0 20px 0 ;
+}
+#prodetails .single-pro-details h2{
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+#prodetails .single-pro-details input{
+    width:50px ;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+#prodetails .single-pro-details h6{
+    font-size: 18px;
+}
+#prodetails .single-pro-details button{
+    border:none;
+    background: none;
+    background-color:#2E8B57;
+    color: #ffffff;;
+    padding:15px 10px;
+    cursor:pointer;
+    margin-top: auto;
+    border-radius: 18px;
+}
+#prodetails .single-pro-details button:hover{
+    background-color: #3CB371;
+    color: #0c0c0c;
+}
+    
+#prodetails .single-pro-details span{
+    line-height: 25px;
+}
+#product1{
+    text-align: center;
+}
+#product1 .cart-list-products{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  align-items: start;
+  padding-top: 20px;
+}
+#product1 .pro{
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    width: auto;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid #088178;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.2);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+    background-color: white;
+}
+
+#product1 .pro:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+    
+}
+#product1 .pro img{
+  width: 100%;
+  aspect-ratio: 4 / 3;  /* todas con la misma proporción */
+  object-fit: cover;    /* recorta sin estirar */
+  border-radius: 20px;
+  display: block;
+}
+
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+
+}
+#product1 .pro .des span{
+    color: #050505;
+    font-size: 12px;
+}
+#product1 .pro .des h5{
+   padding-top: 7px;
+   font-size: 14px;
+   color: #1a1a1a; 
+}
+.fa-star{
+    font-size: 12px;
+    color: rgb(243,181, 25);
+}
+
+#product1 .pro .des h4{
+padding-top: 7px;
+font-size: 15px;
+font-weight: 700;
+color: #088178
+}
+
+.container-related-products{
+    margin-top: 80px;
+}
+header{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  column-gap:1rem;
+}
+.titulo{ margin:0; text-align:center; justify-self:center; }
+
+.container-icon{
+    position: fixed;
+  right: 16px;   /* distancia al borde derecho */
+    /* o top:16px si lo quieres arriba */
+  z-index: 1000;
+}
+/*nav */
+header.nav{
+    position: sticky; top: 0; z-index: 10;
+    background: #fff; box-shadow: var(--shadow);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: .9rem 1.2rem;
+}
+.nav-logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  
+
+  .nav-logo img {
+    height: 60px !important;     
+    max-height: 100%;
+    width: auto !important;       
+    max-width: none !important;   
+    object-fit:fill;
+    display: block;
+  }
+.nav_links a{
+    color:black;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-weight:500 ;
+}
+.nav_links a:hover{color: var(--accent);}
+
+
