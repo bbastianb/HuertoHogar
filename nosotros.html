@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HuertoHogar – Nosotros</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages/nosotros.css">
+<link rel="stylesheet" href="css/overrides.css">
+<!-- Nota: css/style.legacy.css es respaldo y NO se carga. -->
+</head>
+<!-- Favicon (Windows/Chrome/Edge/Firefox) -->
+<link rel="icon" type="image/png" href="img/logo_icono.png?v=1">
+<link rel="icon" type="image/png" sizes="32x32" href="img/logo_icono.png?v=1">
+<link rel="icon" type="image/png" sizes="16x16" href="img/logo_icono.png?v=1">
+
+<!-- iPhone/iPad -->
+<link rel="apple-touch-icon" sizes="180x180" href="img/logo_icono.png?v=1">
+
+<!-- Safari (macOS) pestaña anclada -->
+<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#2E8B57">
+<body class="page-nosotros"><header class="nav">
+    <!-- Logo -->
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="img/huertologo.jpeg" alt="HuertoHogar">
+      </a>
+    </div>
+  
+    
+    <nav class="nav_links">
+      <a href="contacto.html">Contacto</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="blog.html">Blog</a>
+      <a class="btn btn--primary" href="contacto.html">Iniciar sesión</a>
+    </nav>
+  </header>
+<section class="container section-pad">
+<h1>Nosotros</h1>
+<div class="about">
+<div class="about__text">
+<p>Creemos en la alimentación saludable y el apoyo a productores locales.</p>
+<ul class="bullets"><li>Frescura</li><li>Sustentabilidad</li><li>Educación</li></ul>
+</div>
+<div class="about__media"><img src="img/manzanas-manos.jpg"/></div>
+</div>
+<div class="vm-block">
+<div class="vm-card">
+<h2>Visión</h2>
+<p>Ser la tienda de referencia en productos frescos y sustentables, acercando la agricultura local a los hogares.</p>
+</div>
+<div class="vm-card">
+<h2>Misión</h2>
+<p>Ofrecer alimentos de temporada y soluciones para huertos urbanos con calidad, cercanía y compromiso con el medioambiente.</p>
+</div>
+</div>
+
+</section>
+<footer class="site-footer">
+<div class="footer-inner container">
+<div class="footer-brand">
+<h3>HuertoHogar</h3><p>Fresco, local y sustentable. Del campo a tu mesa.</p>
+</div>
+<div class="footer-links">
+<h4>Secciones</h4>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="nosotros.html">Nosotros</a></li>
+<li><a href="noticias.html">Noticias</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+</ul>
+</div>
+<div class="footer-contact">
+<h4>Contacto</h4>
+<ul>
+<li>Email: <a href="mailto:hola@huertohogar.cl">hola@huertohogar.cl</a></li>
+<li>WhatsApp: <a href="#">+56 9 1234 5678</a></li>
+<li>Instagram: <a href="#">@huerto.hogar</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom"><div class="container small">© <span id="year"></span> HuertoHogar — Todos los derechos reservados.</div></div>
+</footer>
+<script>(function(){var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();})();</script>
+<section id="mapa-tiendas" class="container" style="margin: 24px auto">
+  <h2>Nuestras Tiendas</h2>
+  <p>Encuéntranos en: Santiago, Puerto Montt, Villarrica, Nacimiento, Viña del Mar, Valparaíso y Concepción.</p>
+  <div id="map" style="width:100%; height:420px; border-radius:12px; overflow:hidden; box-shadow:0 6px 16px rgba(0,0,0,.06)"></div>
+</section>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="js/mapa-tiendas.js" defer></script>
+</body>
+</html>
